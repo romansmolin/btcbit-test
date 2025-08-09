@@ -15,6 +15,12 @@ interface SortBalancesButtonProps {
 
 const SortBalancesButton: React.FC<SortBalancesButtonProps> = ({ sortOrder, sortBy }) => {
     const pathname = usePathname()
+    const params = new URLSearchParams()
+
+    if (sortBy) params.set('sortBy', sortBy)
+    if (sortOrder) params.set('sortOrder', sortOrder)
+
+    const href = `${pathname}${params.toString() ? `?${params.toString()}` : ''}`
 
     return (
         <Button
@@ -22,10 +28,7 @@ const SortBalancesButton: React.FC<SortBalancesButtonProps> = ({ sortOrder, sort
             aria-label={`Sort by ${sortBy} ${sortOrder === 'asc' ? 'ascending' : 'descending'}`}
             as={Link}
             color="primary"
-            href={{
-                pathname,
-                query: { sortBy, sortOrder },
-            }}
+            href={href}
             size="lg"
             variant="bordered"
         >

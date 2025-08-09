@@ -1,15 +1,14 @@
-import { fontSans } from '@/shared/config/fonts'
-import { siteConfig } from '@/shared/config/site'
 import '@/shared/styles/globals.css'
 import clsx from 'clsx'
 import { Metadata } from 'next'
-
-import { Footer } from './_layout/footer'
-import { Header } from './_layout/header'
-import { Providers } from './_providers/providers'
 import { cookies } from 'next/headers'
 
-import { BalanceCard } from '@/entities/balance'
+import { Providers } from './_providers/providers'
+import { Header } from './_layout/header'
+import { Footer } from './_layout/footer'
+
+import { fontSans } from '@/shared/config/fonts'
+import { siteConfig } from '@/shared/config/site'
 
 export const metadata: Metadata = {
     title: {
