@@ -28,6 +28,10 @@ Keeping these layers separate minimizes accidental coupling and maximizes reuse.
 - **Quality**: ESLint (v9), Prettier
 - **Git hooks**: Husky + lint‑staged (run tests and format/lint on commit)
 
+## Auth and storage
+
+- User information is stored in cookies. It is not stored in `sessionStorage` or `localStorage`.
+
 ## Project scripts
 
 - **`npm run dev`**: Start dev server (Turbopack)
