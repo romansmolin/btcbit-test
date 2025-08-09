@@ -1,0 +1,20 @@
+@import 'tailwindcss';
+
+@config "../../../tailwind.config.js";
+
+
+/* Inputs: ensure wrappers have primary-colored border */
+.input-wrapper,
+.heroui-input-wrapper,
+.heroui-input .heroui-input-wrapper {
+    @apply border-2 placeholder:text-primary;
+}
+
+/* NextUI/HeroUI v2 input wrapper slot */
+[data-slot='input-wrapper'] {
+    @apply border-2 border-primary placeholder:text-primary;
+}
+
+[data-slot='input'] {
+    @apply placeholder:text-primary;
+}
